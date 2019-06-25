@@ -20,6 +20,7 @@
                 </keep-alive>
             </div>
         <Navbar />
+        <router-view name="detail"></router-view>
     </div>
 </template>
 
@@ -46,7 +47,7 @@ export default {
                     if(this.$store.state.city.id == id) {return;}
                     messageBox({
                         title: '定位',
-                        content: nm,
+                        content: nm, 
                         cancel: '取消',
                         ok:'切换定位',
                         handleOk(){
